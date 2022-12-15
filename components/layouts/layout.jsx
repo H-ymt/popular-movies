@@ -16,5 +16,9 @@ export default function Layout({ children }) {
 }
 
 const main = css`
-  color: red;
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 3rem 1rem;
 `;
