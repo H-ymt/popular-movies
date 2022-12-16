@@ -16,11 +16,12 @@ export const style = css`
 
   img {
     width: 100%;
-    height: 30vh;
     object-fit: cover;
   }
 
   h2 {
+    margin: 0.6rem;
+    padding: 0;
     font-size: 1rem;
   }
 

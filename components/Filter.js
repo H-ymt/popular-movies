@@ -52,7 +52,7 @@ const button = css`
   background: #fff;
   color: rgb(65, 98, 168);
   border-radius: 1rem;
-  border: 2px solid rgb(28, 36, 53);
+  border: 1px solid rgb(28, 36, 53);
   font-weight: bold;
   cursor: pointer;
 `;
