@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import Filter from "../components/Filter";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function App() {
   const [popular, setPopular] = useState([]);
@@ -25,29 +26,32 @@ export default function App() {
 
   return (
     <>
+      <h2 css={{ fontSize: "24px" }}>Choose Category</h2>
       <Filter
         popular={popular}
         setFiltered={setFiltered}
         activeGenre={activeGenre}
         setActiveGenre={setActiveGenre}
       />
-      <div css={movies}>
-        {filtered?.map((movie) => {
-          return <Movie key={movie.id} movie={movie} />;
-        })}
-      </div>
+      <motion.div layout css={movies}>
+        <AnimatePresence>
+          {filtered?.map((movie) => {
+            return <Movie key={movie.id} movie={movie} />;
+          })}
+        </AnimatePresence>
+      </motion.div>
     </>
   );
 }
 
 const movies = css`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   grid-column-gap: 1rem;
   grid-row-gap: 2rem;
+  margin-top: 24px;
 
   & img {
     border-radius: 1rem;
-    /* margin-bottom: 1rem; */
   }
 `;
