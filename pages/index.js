@@ -45,13 +45,14 @@ export default function App() {
 }
 
 const movies = css`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  grid-column-gap: 1rem;
-  grid-row-gap: 2rem;
-  margin-top: 24px;
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
 
   & img {
+    min-width: 220px;
     border-radius: 1rem;
   }
 `;

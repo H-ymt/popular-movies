@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { css } from "@emotion/react";
+import Image from "next/image";
 
 function Movie({ movie }) {
   return (
@@ -12,7 +14,13 @@ function Movie({ movie }) {
       css={movie}
     >
       <h2 css={{ fontWeight: "300" }}>{movie.title}</h2>
-      <img src={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path} alt="" />
+      <Image
+        src={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path}
+        alt=""
+        style={{ objectFit: "cover" }}
+        width={500}
+        height={180}
+      />
     </motion.div>
   );
 }
