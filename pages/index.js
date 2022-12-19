@@ -52,7 +52,7 @@ const movies = css`
   flex-wrap: wrap;
 
   & img {
-    min-width: 220px;
+    min-width: 350px;
     border-radius: 1rem;
   }
 `;
